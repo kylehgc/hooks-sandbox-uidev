@@ -40,7 +40,7 @@ export default function Todo () {
     {toDo && toDo.map((item,index) => (
       <button 
       onClick={() => handleClick(index)}
-      id={item}>{item}</button>
+      key={index}>{item}</button>
     ))}      
     </div>
   )
