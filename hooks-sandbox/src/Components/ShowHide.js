@@ -43,12 +43,13 @@ import React from "react";
   )
 }
 const Post = ({item: {text,id,img}, setOpenID, openID}) => {
+
   const open = id === openID 
   
 
   return (
     <div className={`${open? "open" : "closed"} column container align-center `}>
-      <img src={img} width={'50%'} />
+      <img src={img} width={'50%'} alt='' />
       {open ? <div> {text} </div>
       : <div> 
         {text.substring(0,100) + '...'} 
